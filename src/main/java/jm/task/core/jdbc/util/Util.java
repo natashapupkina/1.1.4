@@ -14,10 +14,9 @@ import java.util.Properties;
 
 public class Util {
 
-    // реализуйте настройку соеденения с БД
     public static final String USERNAME = "root";
     public static final String PASSWORD = "rootroot";
-    public static final String URL = "jdbc:mysql://localhost:3306/mydbtest";
+    public static final String URL = "jdbc:mysql://localhost:3306/mydbtest?useSSL=false";
     public static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static SessionFactory sessionFactory;
 
@@ -28,7 +27,6 @@ public class Util {
 
         } catch (SQLException e) {
             System.out.println("SQLException");
-            ;
         }
         return connection;
     }
