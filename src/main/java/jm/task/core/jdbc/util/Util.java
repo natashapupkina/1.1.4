@@ -20,18 +20,6 @@ public class Util {
     public static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static SessionFactory sessionFactory;
 
-    public static Connection getConnection() {
-        Connection connection = null;
-        try {
-            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-
-        } catch (SQLException e) {
-            System.out.println("SQLException");
-        }
-        return connection;
-    }
-
-
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
